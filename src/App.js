@@ -1,25 +1,86 @@
-import logo from './logo.svg';
 import './App.css';
+import "bootstrap/dist/css/bootstrap.min.css";
+import Poll from './Polls/Poll';
 
 function App() {
+
+      const polls = [
+            {
+                  name : 'Кто еблан',
+                  text : '',
+                  options: [
+                        {
+                              id: 1,
+                              optionName: 'я',
+                        },
+
+                        {
+                              id: 2,
+                              optionName: 'ты'
+                        },
+
+                  ]
+            },
+
+            {
+                  name : 'ебейший опрос',
+                  text : '123123123123',
+                  options: [
+                        {
+                              id: 3,
+                              optionName: 'нет не ебейший'
+                        },
+
+                        {
+                              id: 4,
+                              optionName: 'я еблан'
+                        },
+
+                  ]
+            },
+
+            {
+                  name : 'Poll1',
+                  text : 'textPoll',
+                  options: [
+                        {
+                              id: 5,
+                              optionName: '123'
+                        },
+
+                        {
+                              id: 6,
+                              optionName: '321'
+                        },
+
+                        {
+                              id: 7,
+                              optionName: '123'
+                        },
+
+                        {
+                              id: 8,
+                              optionName: '123'
+                        },
+
+                        {
+                              id: 9,
+                              optionName: '123'
+                        },
+
+                  ]
+            },
+            
+      ]
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={``}>
+      {polls.map((poll, index)=>{
+            return(
+                  <Poll poll={poll}/>
+            )
+      })}
     </div>
-  );
+  )
 }
 
 export default App;
