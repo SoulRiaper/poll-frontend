@@ -15,7 +15,7 @@ function PollCreating() {
       function sendFormData(){
             $('.createPoll', () => {
 
-                  // TODO: change option adding algorithm
+                  // TODO: change option adding algorithm (adding option by enter click (всегда появляется одно поле для ответа после нажатия enter можно вводить следующее значение))
 
                   var Poll = {
                         poll_id: 0,
@@ -29,6 +29,7 @@ function PollCreating() {
                   
                   alert(Poll)
 
+                  //TODO: need to fix cookies from server not accepted by the client
                   $.ajax({
                         type: "POST",
                         url: 'http://localhost:8000?r=poll/createpoll',
@@ -44,6 +45,7 @@ function PollCreating() {
             })
       }
 
+      //TODO: add cookie to access
       function deletePoll() {
             $.ajax({
                   type: "DELETE",
