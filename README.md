@@ -1,4 +1,4 @@
-## Building in docker 
+# Building in docker 
 
 First of all you need to build docker image from source code
 
