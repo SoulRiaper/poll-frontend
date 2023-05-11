@@ -1,8 +1,12 @@
 import './App.css';
 import "bootstrap/dist/css/bootstrap.min.css";
 import Poll from './Polls/Poll';
+import testQuery from './DataQuery/TestFetch';
+import PollCreating from './PollCreating/PollCreating';
 
 function App() {
+
+
 
       const polls = [
             {
@@ -74,11 +78,13 @@ function App() {
       ]
   return (
     <div className={``}>
+      <PollCreating/>
       {polls.map((poll, index)=>{
             return(
                   <Poll poll={poll}/>
             )
       })}
+      <button className='button mx-auto d-block' onClick={()=> testQuery()}>Click!</button>
     </div>
   )
 }
