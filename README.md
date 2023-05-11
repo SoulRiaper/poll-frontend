@@ -8,6 +8,16 @@ In the project directory, you can run:
 
 ### `npm start`
 
+## Building in docker 
+
+First of all you need to build docker image from source code
+
+### `docker build .`
+
+And run docker container with needed port
+
+### `docker run -p your-port:3000 -d --name some-polls poll-image-name`
+
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
